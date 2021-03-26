@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto,
+    Helvetica Neue, sans-serif;
+  font-size: 14px;
+  line-height: 1.43;
+  color: #484848;
+  background-color: #fff;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.airbnb {
+  color: #ff385c;
+}
+
+.airbnb-bg {
+  background-color: #ff385c;
+  z-index: 0;
+}
+
+/*HEADER ADVANCE SEARCH*/
+.h-search {
+  height: 66px;
+}
+
+.left-search-ops {
+  left: 20%;
+}
+
+/*HEADER STICKY*/
+
+.rounded-custom {
+  box-shadow: rgb(255, 255, 255) 0px 0px 0px 1.5px !important;
+  position: absolute !important;
+  z-index: 1 !important;
+  border-radius: 9px !important;
+  color: rgb(255, 255, 255) !important;
+  font-size: 6px !important;
+  font-weight: 800 !important;
+  height: 16px !important;
+
+  line-height: 16px !important;
+
+  min-width: 16px !important;
+
+  text-align: center !important;
+}
