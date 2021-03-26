@@ -11,14 +11,14 @@ export default function Home({ movie, trendingList, inTheathers, topRated }) {
       <div className="flex flex-col   w-full  ">
         <div
           style={{ backgroundImage: `url(${image})` }}
-          className="h-auto bg-no-repeat bg-cover"
+          className="h-auto bg-no-repeat  bg-top bg-cover"
         >
           <div className="flex flex-row text-white  bg-gradient-to-b  from-transparent to-black  h-full">
-            <div className="block h-auto  w-full lg:w-4/6 mt-44 mb-20 mx-10 lg:mx-20 ">
-              <div className="mb-6">
-                <h2 className=" lg:text-6xl mb-2 font-bold ">{movie.title}</h2>
-                <h4 className="text-3xl font-semibold mb-4">{movie.tagline}</h4>
-                <p className="text-xl leading-8">
+            <div className="block h-auto  w-full lg:w-4/6 mt-20 lg:mt-44 mb-20 mx-10 lg:mx-20 ">
+              <div className=" mb-2 lg:mb-6">
+                <h2 className="text-3xl lg:text-6xl mb-2 font-bold ">{movie.title}</h2>
+                <h4 className="text-xl lg:text-3xl font-semibold mb-4">{movie.tagline}</h4>
+                <p className="text-md lg:text-xl lg:leading-8">
                   {movie.overview.substr(0, 100)}...
                 </p>
               </div>

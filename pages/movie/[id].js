@@ -33,7 +33,7 @@ export default function Movie({ movie }) {
               "w1280"
             )}`,
           }}
-          className="h-auto bg-no-repeat bg-cover  "
+          className=" bg-no-repeat bg-top bg-cover   "
         >
           <div className="flex flex-col md:flex-row  text-white  bg-gradient-to-b  from-transparent  to-black  h-full">
             <div className="flex flex-col mx-auto md:flex-row items-center h-auto  w-full  mt-20 md:mt-44 mb-20 md:mx-10 lg:mx-20 ">
@@ -44,15 +44,15 @@ export default function Movie({ movie }) {
                     "w300"
                   )})`,
                 }}
-                className="block flex-shrink-0 rounded-md  mr-6 w-64 h-96 bg-no-repeat cursor-pointer bg-cover border-b border-gray-800 hover:border-gray-200  "
+                className=" block flex-shrink-0 rounded-md  mr-6 w-64 h-96 bg-no-repeat cursor-pointer bg-cover "
               ></div>
 
               <div className="flex flex-col items-center md:items-start">
-                <div className="mb-6 ">
-                  <h2 className="hidden lg:block lg:text-6xl mb-2 font-bold ">
+                <div className="mb-6 text-center lg:text-left   ">
+                  <h2 className="text-3xl lg:text-6xl mb-2 font-bold ">
                     {movie.title}
                   </h2>
-                  <h4 className="lg:text-3xl text-xs font-semibold mb-4">
+                  <h4 className="text-xl lg:text-3xl font-semibold mb-4">
                     {movie.tagline}
                   </h4>
                   <p className="text-xs lg:text-xl">
@@ -60,7 +60,7 @@ export default function Movie({ movie }) {
                   </p>
                 </div>
 
-                <div className="flex flex-row  justify-auto w-2/5">
+                <div className="flex flex-row flex-wrap justify-auto lg:w-2/5">
                   {movie.genres.map((genre) => (
                     <p
                       key={genre.id}

@@ -35,7 +35,7 @@ export default function Header() {
 
       <nav className="flex flex-row items-center justify-between h-14 px-10 fixed w-full text-white bg-gray-600 bg-opacity-20 ">
         <Link href="/" >
-          <div className="flex flex-row items-center  ">
+          <div className="md:flex flex-row items-center hidden   ">
             <img
               src="../logo.svg"
               alt="logo"
