@@ -1,13 +1,12 @@
 import "../styles/globals.css";
-import Head from "next/head";
-import Footer from "../contaniners/Footer/footer";
-import Header from "../contaniners/Header/header";
+import { SearchProvider } from "../contexts/SearchContext";
 
 function MyApp({ Component, pageProps }) {
   return (
     <div>
-      <Component {...pageProps} />
-     
+      <SearchProvider>
+        <Component {...pageProps} />
+      </SearchProvider>
     </div>
   );
 }

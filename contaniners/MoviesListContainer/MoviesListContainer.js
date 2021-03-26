@@ -12,12 +12,14 @@ export default function MoviesListContainer({ movies, category }) {
   const scrollRef = useHorizontalScroll();
 
   return (
-    <div className="  text-white my-6 py-6  px-10 ">
+    <div className="  text-white   px-10 ">
       <h3 className="text-2xl font-semibold mb-6 ">{category}</h3>
       <div
         ref={scrollRef}
-        id="card-container "
-        className="flex flex-row  flex-nowrap overflow-hidden "
+        id="card-container  "
+        className={`flex flex-row   overflow-hidden ${
+          category === "Search Results" ? "flex-wrap justify-evenly flex-grow" : "flex-nowrap"
+        }`}
       >
         {moviesList &&
           moviesList.map((movie) => <MovieCard key={movie.id} movie={movie} />)}
