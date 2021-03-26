@@ -2,9 +2,9 @@ import Link from "next/link";
 import { useAmp } from "next/amp";
 import { useMoviePicture } from "../../hooks/useMoviePicture";
 
-export const config = { amp: true };
-
 export default function MovieCard({ movie }) {
+  if ((movie.poster_path === null)) return <></>;
+
   return (
     <Link href={`/movie/${encodeURIComponent(movie.id)}`} key={movie.id}>
       <div
