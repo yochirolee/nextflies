@@ -3,7 +3,6 @@ import CastCrewContainer from "../../contaniners/CastCrew/CastCrewContianer";
 import VideoModal from "../../contaniners/Modals/videoModal";
 import { useMoviePicture } from "../../hooks/useMoviePicture";
 import time_convert from "../../utils/timeConvert";
-import Layour from "../../Layout/Layout";
 import Layout from "../../Layout/Layout";
 
 export default function Movie({ movie }) {
@@ -22,16 +21,14 @@ export default function Movie({ movie }) {
     setShowModal(!showModal);
   };
 
-  const image = useMoviePicture(movie.backdrop_path, "w1280");
-  const getMoviePicture = (path, size) => {
-    return useMoviePicture(path, size);
-  };
+
+
   return (
     <Layout>
       <div className="flex flex-col   w-full  ">
         <div
           style={{
-            backgroundImage: `url(${getMoviePicture(
+            backgroundImage: `url(${useMoviePicture(
               movie.backdrop_path,
               "w1280"
             )}`,
@@ -42,7 +39,7 @@ export default function Movie({ movie }) {
             <div className="flex flex-row items-center h-auto  w-full  mt-44 mb-20 mx-10 lg:mx-20 ">
               <div
                 style={{
-                  backgroundImage: `url(${getMoviePicture(
+                  backgroundImage: `url(${useMoviePicture(
                     movie.poster_path,
                     "w300"
                   )})`,
