@@ -2,7 +2,7 @@ import { useRef, useEffect } from "react";
 
 export function useHorizontalScroll() {
   const elRef = useRef();
-  
+
   useEffect(() => {
     const el = elRef.current;
     if (el) {
