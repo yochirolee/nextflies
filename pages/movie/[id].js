@@ -72,12 +72,12 @@ export default function Movie({ movie }) {
 
                 <button
                   onClick={handleToggle}
-                  className="bg-gray-700 font-bold my-6 opacity-75 rounded-md py-2 px-10 w-60 flex flex-row justify-around hover:bg-gray-500"
+                  className="bg-gray-700 font-bold my-6 opacity-75 rounded-md py-2 px-10 w-64 flex flex-row justify-around hover:bg-gray-500 "
                 >
-                  <div className="transform -rotate-90 ring-2 ring-white	 rounded-full ">
+                  <div className="transform -rotate-90 ring-2 ring-white mr-2	mt-0.5 rounded-full ">
                     <svg
-                      width="30"
-                      height="30"
+                      width="25"
+                      height="25"
                       fill="currentColor"
                       viewBox="0 0 1792 1792"
                       xmlns="http://www.w3.org/2000/svg"
@@ -85,7 +85,7 @@ export default function Movie({ movie }) {
                       <path d="M1408 704q0 26-19 45l-448 448q-19 19-45 19t-45-19l-448-448q-19-19-19-45t19-45 45-19h896q26 0 45 19t19 45z"></path>
                     </svg>
                   </div>
-                  <p className="my-auto">Watch Trailer</p>
+                  <p className="my-auto text-xl">Watch Trailer</p>
                 </button>
                 <p className="text-xl leading-8">{movie.overview}</p>
               </div>

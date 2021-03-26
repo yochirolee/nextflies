@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Link from "next/link";
 import { useRouter } from "next/router";
 import { useContext, useEffect, useRef } from "react";
 import { SearchContext } from "../../contexts/SearchContext";
@@ -32,8 +33,17 @@ export default function Header() {
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
 
-      <nav className="flex flex-row items-center justify-between h-14 px-10 fixed w-full text-white bg-gray-300 bg-opacity-30 ">
-        <p>Logo</p>
+      <nav className="flex flex-row items-center justify-between h-14 px-10 fixed w-full text-white bg-gray-600 bg-opacity-20 ">
+        <Link href="/" >
+          <div className="flex flex-row items-center  ">
+            <img
+              src="../logo.svg"
+              alt="logo"
+              className=" rounded-full ring-gray-300 ring h-8 w-8 opacity-80 cursor-pointer "
+            ></img>
+            <p className="ml-2 text-2xl cursor-pointer">Nextflies</p>
+          </div>
+        </Link>
 
         <div className="relative">
           <input
