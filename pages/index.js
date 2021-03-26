@@ -26,7 +26,7 @@ export default function Home({ movie, trendingList, inTheathers, topRated }) {
 export async function getStaticProps(context) {
   const [movie, trendingList, inTheathers, topRated] = await Promise.all([
     fetch(
-      `https://api.themoviedb.org/3/movie/${Math.floor((Math.random() * 100) + 1)}?api_key=45bf6592c14a965b33549f4cc7e6c664&append_to_response=videos,credits,simila`
+      `https://api.themoviedb.org/3/movie/58?api_key=45bf6592c14a965b33549f4cc7e6c664&append_to_response=videos,credits,simila`
     ).then((r) => r.json()),
     fetch(
       `https://api.themoviedb.org/3/movie/popular?api_key=45bf6592c14a965b33549f4cc7e6c664`

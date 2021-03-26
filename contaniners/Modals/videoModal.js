@@ -1,6 +1,6 @@
 export default function VideoModal({ movie, handleToggle }) {
   return (
-    <div className="fixed h-full w-full grid place-items-center border bg-gray-400 bg-opacity-75">
+    <div className="fixed h-full w-full grid place-items-center border bg-black bg-opacity-90">
       <div className="relative  h-3/4 w-3/4">
         <button
           onClick={handleToggle}
