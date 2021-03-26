@@ -19,7 +19,7 @@ export default function Layout({ children, home }) {
 
       <Header></Header>
       <main>{children}</main>
-      <Footer />
+     
     </div>
   );
 }
