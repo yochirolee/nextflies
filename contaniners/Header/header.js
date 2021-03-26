@@ -16,9 +16,7 @@ export default function Header() {
   };
 
   useEffect(() => {
-    console.log(router.pathname,"PAthName",search.length)
-    if (search.length === 0 && router.pathname === "/search") 
-    router.push("/");
+    if (search.length === 0 && router.pathname === "/search") router.push("/");
     inputRef.current.focus();
   }, [search]);
 
