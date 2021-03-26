@@ -55,10 +55,10 @@ export default function Jumbotron({ movie }) {
               </div>
 
               <div className="flex flex-row flex-wrap justify-auto lg:w-2/5">
-                {movie.genres.map((genre) => (
+                {movie.genres && movie.genres.map((genre) => (
                   <p
                     key={genre.id}
-                    className="rounded-xl ml-2 font-thin text-xs sm:text-sm text-gray-300 bg-gray-300 px-2 bg-opacity-30"
+                    className="rounded-xl ml-2 font-thin text-xs sm:text-sm text-gray-300 bg-gray-700 px-2 bg-opacity-70"
                   >
                     {genre.name}
                   </p>
@@ -67,9 +67,9 @@ export default function Jumbotron({ movie }) {
 
               <button
                 onClick={handleToggle}
-                className="bg-gray-700 font-bold my-6 opacity-75 rounded-md py-2 px-10 w-64 flex flex-row justify-around hover:bg-gray-500 "
+                className="bg-red-800 font-bold my-6 opacity-75 rounded-md py-2 px-10 w-64 h-14 flex flex-row justify-around hover:bg-red-700 "
               >
-                <div className="transform -rotate-90 ring-2 ring-white mr-2	mt-0.5 rounded-full ">
+                <div className="transform -rotate-90 ring-2 ring-white mr-2	mt-2 rounded-full ">
                   <svg
                     width="25"
                     height="25"
