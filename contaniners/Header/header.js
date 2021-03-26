@@ -17,8 +17,12 @@ export default function Header() {
   };
 
   useEffect(() => {
-    if (search.length === 0 && router.pathname === "/search") router.push("/");
     inputRef.current.focus();
+    const delayDebounceFn = setTimeout(() => {
+      if (search.length === 0 && router.pathname === "/search")
+        router.push("/");
+    }, 1000);
+    return () => clearTimeout(delayDebounceFn);
   }, [search]);
 
   return (
@@ -33,15 +37,17 @@ export default function Header() {
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
 
-      <nav className="flex flex-row items-center justify-between h-14 px-10 fixed w-full text-white bg-gray-600 bg-opacity-20 ">
-        <Link href="/" >
+      <nav className="flex flex-row items-center z-20 justify-between h-14 px-10 fixed w-full text-white bg-gray-800 bg-opacity-70 ">
+        <Link href="/">
           <div className="md:flex flex-row items-center hidden   ">
             <img
               src="../logo.svg"
               alt="logo"
               className=" rounded-full ring-gray-300 ring h-8 w-8 opacity-80 cursor-pointer "
             ></img>
-            <p className="hidden md:block ml-2 text-2xl cursor-pointer">Nextflies</p>
+            <p className="hidden md:block ml-2 text-2xl cursor-pointer ">
+              Nextflies
+            </p>
           </div>
         </Link>
 
@@ -52,14 +58,14 @@ export default function Header() {
             ref={inputRef}
             placeholder="Search"
             value={search}
-            className="w-64 pl-5 pr-10 rounded-md h-10 text-gray-700 focus:outline-none "
+            className="w-64 pl-5 pr-10 rounded-md h-10 border  opacity-70 bg-transparent focus:outline-none "
           ></input>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentcolor"
-            className="absolute bg-white h-6 w-6 top-2 right-2 text-gray-500"
+            className="absolute  h-6 w-6 top-2 right-2 text-gray-300"
           >
             <path
               stroke-linecap="round"

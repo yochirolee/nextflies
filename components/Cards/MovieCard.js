@@ -1,5 +1,8 @@
 import Link from "next/link";
+import { useAmp } from "next/amp";
 import { useMoviePicture } from "../../hooks/useMoviePicture";
+
+export const config = { amp: true };
 
 export default function MovieCard({ movie }) {
   return (
