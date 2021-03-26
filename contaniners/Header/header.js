@@ -15,7 +15,7 @@ export default function Header() {
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
 
-      <nav className="flex flex-row items-center justify-between h-14 px-10 fixed w-full text-white bg-black bg-opacity-30 ">
+      <nav className="flex flex-row items-center justify-between h-14 px-10 fixed w-full text-white bg-gray-300 bg-opacity-30 ">
         <p>Logo</p>
         <input id='search' className='w-64 rounded-md h-10 text-gray-700 '></input>
         <p>Others</p>
