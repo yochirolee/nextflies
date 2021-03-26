@@ -25,3 +25,14 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.header {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 3rem;
+  padding: 0 2rem;
+  position: fixed;
+  color: white;
+}

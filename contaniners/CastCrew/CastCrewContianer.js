@@ -1,5 +1,6 @@
 import CastCrewCard from "../../components/Cards/CastCrewCard";
 import { useMoviePicture } from "../../hooks/useMoviePicture";
+import Image from "next/image";
 
 export default function CastCrewContainer({ credits }) {
   const { cast, crew } = credits;
@@ -17,8 +18,11 @@ export default function CastCrewContainer({ credits }) {
       </div>
 
       <div className=" flex flex-col items-center my-6 ">
-        <div className="rounded-full  h-28 w-24">
-          <img className="rounded-full w-24 h-28 object-fill" src={picture} />
+        <div className=" w-28 mt-10 ">
+          <img
+            className=" h-24 w-24 rounded-full  object-cover  "
+            src={picture}
+          />
         </div>
         <div className="">{movieDirector.name}</div>
         <div className="text-xs">{movieDirector.job}</div>
