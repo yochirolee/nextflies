@@ -41,7 +41,7 @@ export default function Header() {
               alt="logo"
               className=" rounded-full ring-gray-300 ring h-8 w-8 opacity-80 cursor-pointer "
             ></img>
-            <p className="ml-2 text-2xl cursor-pointer">Nextflies</p>
+            <p className="hidden md:block ml-2 text-2xl cursor-pointer">Nextflies</p>
           </div>
         </Link>
 

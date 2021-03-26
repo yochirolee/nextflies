@@ -35,8 +35,8 @@ export default function Movie({ movie }) {
           }}
           className="h-auto bg-no-repeat bg-cover  "
         >
-          <div className="flex flex-row  text-white  bg-gradient-to-b  from-transparent  to-black  h-full">
-            <div className="flex flex-row items-center h-auto  w-full  mt-44 mb-20 mx-10 lg:mx-20 ">
+          <div className="flex flex-col md:flex-row  text-white  bg-gradient-to-b  from-transparent  to-black  h-full">
+            <div className="flex flex-col mx-auto md:flex-row items-center h-auto  w-full  mt-20 md:mt-44 mb-20 md:mx-10 lg:mx-20 ">
               <div
                 style={{
                   backgroundImage: `url(${useMoviePicture(
@@ -46,15 +46,16 @@ export default function Movie({ movie }) {
                 }}
                 className="block flex-shrink-0 rounded-md  mr-6 w-64 h-96 bg-no-repeat cursor-pointer bg-cover border-b border-gray-800 hover:border-gray-200  "
               ></div>
-              <div className="flex flex-col">
-                <div className="mb-6">
-                  <h2 className=" lg:text-6xl mb-2 font-bold ">
+
+              <div className="flex flex-col items-center md:items-start">
+                <div className="mb-6 ">
+                  <h2 className="hidden lg:block lg:text-6xl mb-2 font-bold ">
                     {movie.title}
                   </h2>
-                  <h4 className="text-3xl font-semibold mb-4">
+                  <h4 className="lg:text-3xl text-xs font-semibold mb-4">
                     {movie.tagline}
                   </h4>
-                  <p className="text-xl">
+                  <p className="text-xs lg:text-xl">
                     Duration: {time_convert(movie.runtime)}
                   </p>
                 </div>
@@ -63,7 +64,7 @@ export default function Movie({ movie }) {
                   {movie.genres.map((genre) => (
                     <p
                       key={genre.id}
-                      className="rounded-xl ml-2 font-thin text-sm text-gray-300 bg-gray-300 px-2 bg-opacity-30"
+                      className="rounded-xl ml-2 font-thin text-xs sm:text-sm text-gray-300 bg-gray-300 px-2 bg-opacity-30"
                     >
                       {genre.name}
                     </p>
@@ -87,7 +88,7 @@ export default function Movie({ movie }) {
                   </div>
                   <p className="my-auto text-xl">Watch Trailer</p>
                 </button>
-                <p className="text-xl leading-8">{movie.overview}</p>
+                <p className="lg:text-xl lg:leading-8 px-10 lg:px-0">{movie.overview}</p>
               </div>
             </div>
           </div>

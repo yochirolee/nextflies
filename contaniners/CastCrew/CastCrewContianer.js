@@ -11,16 +11,16 @@ export default function CastCrewContainer({ credits }) {
 
   return (
     <div className="text-white container mx-auto">
-      <div className="flex flex-row justify-evenly ">
+      <div className="flex flex-row flex-wrap justify-evenly ">
         {movieCast.map((person) => (
           <CastCrewCard key={person.id} person={person} />
         ))}
       </div>
 
       <div className=" flex flex-col items-center my-6 ">
-        <div className=" w-28 mt-10 ">
+        <div className=" lg:w-28 lg:mt-10 ">
           <img
-            className=" h-24 w-24 rounded-full  object-cover  "
+            className="h-8 w-8 lg:h-24 lg:w-24 rounded-full  object-cover  "
             src={picture}
           />
         </div>
