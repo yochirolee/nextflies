@@ -4,7 +4,7 @@ export default function VideoModal({ movie, handleToggle }) {
       <div className="relative  h-3/4 w-3/4">
         <button
           onClick={handleToggle}
-          className="absolute top-0 right-0 text-white pr-4 py-6 focus:outline-none"
+          className="absolute -top-6 right-0 h-10 w-10 font-bold text-white p-2 focus:outline-none rounded-full border bg-gray-800 hover:bg-gray-700"
         >
           X
         </button>

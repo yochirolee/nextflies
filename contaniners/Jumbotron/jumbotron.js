@@ -27,7 +27,7 @@ export default function Jumbotron({ movie }) {
             "w1280"
           )}`,
         }}
-        className=" bg-no-repeat bg-top bg-cover   "
+        className=" bg-no-repeat bg-top bg-cover "
       >
         <div className="flex flex-col md:flex-row  text-white  bg-gradient-to-b  from-transparent  to-black  h-full">
           <div className="flex flex-col mx-auto md:flex-row items-center h-auto  w-full  mt-20 md:mt-44 mb-20 md:mx-10 lg:mx-20 ">
@@ -37,9 +37,12 @@ export default function Jumbotron({ movie }) {
                   movie.poster_path,
                   "w300"
                 )})`,
+                
               }}
-              className=" block flex-shrink-0 rounded-md  mr-6 w-64 h-96 bg-no-repeat cursor-pointer bg-cover "
-            ></div>
+              className=" block relative flex-shrink-0 rounded-md  mr-6 w-64 h-96 bg-no-repeat cursor-pointer bg-cover "
+            >
+            
+            </div>
 
             <div className="flex flex-col items-center md:items-start">
               <div className="mb-6 text-center lg:text-left   ">
@@ -55,14 +58,15 @@ export default function Jumbotron({ movie }) {
               </div>
 
               <div className="flex flex-row flex-wrap justify-auto lg:w-2/5">
-                {movie.genres && movie.genres.map((genre) => (
-                  <p
-                    key={genre.id}
-                    className="rounded-xl ml-2 font-thin text-xs sm:text-sm text-gray-300 bg-gray-700 px-2 bg-opacity-70"
-                  >
-                    {genre.name}
-                  </p>
-                ))}
+                {movie.genres &&
+                  movie.genres.map((genre) => (
+                    <p
+                      key={genre.id}
+                      className="rounded-xl ml-2 font-thin text-xs sm:text-sm text-gray-300 bg-gray-700 px-2 bg-opacity-70"
+                    >
+                      {genre.name}
+                    </p>
+                  ))}
               </div>
 
               <button
@@ -89,7 +93,9 @@ export default function Jumbotron({ movie }) {
           </div>
         </div>
       </div>
-      {showModal && movie.videos && <VideoModal movie={movie} handleToggle={handleToggle} />}
+      {showModal && movie.videos && (
+        <VideoModal movie={movie} handleToggle={handleToggle} />
+      )}
     </>
   );
 }

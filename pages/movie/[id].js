@@ -1,9 +1,9 @@
-
 import CastCrewContainer from "../../contaniners/CastCrew/CastCrewContianer";
-
 
 import Layout from "../../Layout/Layout";
 import Jumbotron from "../../contaniners/Jumbotron/jumbotron";
+
+
 
 export default function Movie({ movie }) {
   if (!movie)
@@ -15,14 +15,13 @@ export default function Movie({ movie }) {
       </Layout>
     );
 
-
+    console.log(movie)
 
   return (
     <Layout>
       <div className="flex flex-col   w-full  ">
-        <Jumbotron movie={movie}  />
+        <Jumbotron movie={movie} />
         <CastCrewContainer credits={movie.credits} />
-        
       </div>
     </Layout>
   );

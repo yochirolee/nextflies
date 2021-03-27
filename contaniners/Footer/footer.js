@@ -32,7 +32,7 @@ export default function Footer() {
             <span className="sr-only">Kutty Home Page</span>
           </a>
           <nav className="mb-8">
-            <p className="mb-3 text-xs font-bold tracking-wider text-gray-500 uppercase">
+            <p className="mb-3 text-xs font-bold tracking-wider text-gray-400 uppercase">
               Product
             </p>
             <a
@@ -67,7 +67,7 @@ export default function Footer() {
             </a>
           </nav>
           <nav className="mb-8">
-            <p className="mb-3 text-xs font-bold tracking-wider text-gray-500 uppercase">
+            <p className="mb-3 text-xs font-bold tracking-wider text-gray-400 uppercase">
               About
             </p>
             <a
@@ -96,7 +96,7 @@ export default function Footer() {
             </a>
           </nav>
           <nav className="mb-8">
-            <p className="mb-3 text-xs font-bold tracking-wider text-gray-500 uppercase">
+            <p className="mb-3 text-xs font-bold tracking-wider text-gray-400 uppercase">
               Contact
             </p>
             <a
@@ -131,7 +131,7 @@ export default function Footer() {
             </a>
           </nav>
           <nav className="mb-8">
-            <p className="mb-3 text-xs font-bold tracking-wider text-gray-500 uppercase">
+            <p className="mb-3 text-xs font-bold tracking-wider text-gray-400 uppercase">
               Legal
             </p>
             <a
@@ -166,7 +166,7 @@ export default function Footer() {
             </a>
           </nav>
         </div>
-        <p className="text-sm font-medium text-left text-gray-600 md:text-center">
+        <p className="text-sm font-medium text-left text-gray-400 md:text-center">
           © Copyright 2021, Cellfix. Made by Yosho.
         </p>
       </div>

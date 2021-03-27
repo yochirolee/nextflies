@@ -28,24 +28,23 @@ export default function Header() {
   return (
     <>
       <Head>
+      <title>{siteTitle}</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <link rel="icon" href="/favicon.ico" />
         <meta
           name="description"
           content="Learn how to build something like Neflix"
         />
         <meta name="og:title" content={siteTitle} />
+     
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
 
       <nav className="flex flex-row items-center z-20 justify-between h-14 px-10 fixed w-full text-white bg-gray-800 bg-opacity-70 ">
         <Link href="/">
           <div className="md:flex flex-row items-center hidden   ">
-            <img
-              src="../logo.svg"
-              alt="logo"
-              className=" rounded-full ring-gray-300 ring h-8 w-8 opacity-80 cursor-pointer "
-            ></img>
-            <p className="hidden md:block ml-2 text-2xl cursor-pointer ">
+           
+            <p className="hidden md:block px-2 text-lg cursor-pointer ">
               Nextflies
             </p>
           </div>
