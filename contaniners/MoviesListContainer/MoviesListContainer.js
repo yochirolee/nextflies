@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { useHorizontalScroll } from "../../hooks/useHorizotalScroll";
 import MovieCard from "../../components/Cards/MovieCard";
 

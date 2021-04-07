@@ -1,6 +1,9 @@
+import dynamic from "next/dynamic";
 import Layout from "../Layout/Layout";
-import MoviesListContainer from "../contaniners/MoviesListContainer/MoviesListContainer";
-import Jumbotron from "../contaniners/Jumbotron/jumbotron";
+const MoviesListContainer = dynamic(() =>
+  import("../contaniners/MoviesListContainer/MoviesListContainer")
+);
+const Jumbotron = dynamic(() => import("../contaniners/Jumbotron/jumbotron"));
 
 export default function Home({ movie, trendingList, inTheathers, topRated }) {
   return (

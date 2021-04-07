@@ -1,4 +1,8 @@
-import CastCrewContainer from "../../contaniners/CastCrew/CastCrewContianer";
+import dynamic from "next/dynamic";
+const CastCrewContainer = dynamic(() =>
+  import("../../contaniners/CastCrew/CastCrewContianer")
+);
+
 import Jumbotron from "../../contaniners/Jumbotron/jumbotron";
 import Layout from "../../Layout/Layout";
 
