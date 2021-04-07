@@ -1,9 +1,6 @@
 import CastCrewContainer from "../../contaniners/CastCrew/CastCrewContianer";
-
-import Layout from "../../Layout/Layout";
 import Jumbotron from "../../contaniners/Jumbotron/jumbotron";
-
-
+import Layout from "../../Layout/Layout";
 
 export default function Movie({ movie }) {
   if (!movie)
@@ -14,8 +11,6 @@ export default function Movie({ movie }) {
         </div>
       </Layout>
     );
-
-    console.log(movie)
 
   return (
     <Layout>

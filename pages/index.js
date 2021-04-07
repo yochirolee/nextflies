@@ -1,7 +1,6 @@
 import Layout from "../Layout/Layout";
 import MoviesListContainer from "../contaniners/MoviesListContainer/MoviesListContainer";
 import Jumbotron from "../contaniners/Jumbotron/jumbotron";
-import VideoModal from "../contaniners/Modals/videoModal";
 
 export default function Home({ movie, trendingList, inTheathers, topRated }) {
   return (

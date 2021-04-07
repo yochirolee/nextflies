@@ -2,7 +2,6 @@ import { useContext, useState, useEffect } from "react";
 import { SearchContext } from "../contexts/SearchContext";
 import Layout from "../Layout/Layout";
 import MovieListContainer from "../contaniners/MoviesListContainer/MoviesListContainer";
-import { useRouter } from "next/router";
 
 export default function Search() {
   const [search] = useContext(SearchContext);
