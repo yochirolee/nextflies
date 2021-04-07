@@ -1,7 +1,10 @@
+import dynamic from "next/dynamic";
 import { useContext, useState, useEffect } from "react";
 import { SearchContext } from "../contexts/SearchContext";
-import Layout from "../Layout/Layout";
-import MovieListContainer from "../contaniners/MoviesListContainer/MoviesListContainer";
+const Layout = dynamic(() => import("../Layout/Layout"));
+const MovieListContainer = dynamic(() =>
+  import("../contaniners/MoviesListContainer/MoviesListContainer")
+);
 
 export default function Search() {
   const [search] = useContext(SearchContext);
