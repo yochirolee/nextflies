@@ -2,9 +2,10 @@ import dynamic from "next/dynamic";
 const CastCrewContainer = dynamic(() =>
   import("../../contaniners/CastCrew/CastCrewContianer")
 );
-
-import Jumbotron from "../../contaniners/Jumbotron/jumbotron";
-import Layout from "../../Layout/Layout";
+const Layout = dynamic(() => import("../../Layout/Layout"));
+const Jumbotron = dynamic(() =>
+  import("../../contaniners/Jumbotron/jumbotron")
+);
 
 export default function Movie({ movie }) {
   if (!movie)
