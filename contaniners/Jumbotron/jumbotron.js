@@ -1,7 +1,8 @@
+import dynamic from "next/dynamic";
 import { useMoviePicture } from "../../hooks/useMoviePicture";
 import time_convert from "../../utils/timeConvert";
 import { useState } from "react";
-import VideoModal from "../Modals/videoModal";
+const VideoModal = dynamic(() => import("../Modals/videoModal"));
 
 export default function Jumbotron({ movie }) {
   if (!movie)
@@ -37,12 +38,9 @@ export default function Jumbotron({ movie }) {
                   movie.poster_path,
                   "w300"
                 )})`,
-                
               }}
               className=" block relative flex-shrink-0 rounded-md  mr-6 w-64 h-96 bg-no-repeat cursor-pointer bg-cover "
-            >
-            
-            </div>
+            ></div>
 
             <div className="flex flex-col items-center md:items-start">
               <div className="mb-6 text-center lg:text-left   ">
