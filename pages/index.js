@@ -3,9 +3,7 @@ import Layout from "../Layout/Layout";
 const MoviesListContainer = dynamic(() =>
   import("../contaniners/MoviesListContainer/MoviesListContainer")
 );
-const Slider = dynamic(() =>
-  import("../components/sliders/slider")
-);
+const Slider = dynamic(() => import("../components/sliders/slider"));
 const Jumbotron = dynamic(() => import("../contaniners/Jumbotron/jumbotron"));
 
 export default function Home({ movie, trendingList, inTheathers, topRated }) {
@@ -15,13 +13,9 @@ export default function Home({ movie, trendingList, inTheathers, topRated }) {
         <Jumbotron movie={movie} />
 
         <div className="w-full ">
-          <Slider
-            movies={trendingList}
-            category={"Trending Movies"}
-          />
-
-          <MoviesListContainer movies={inTheathers} category={"In Theaters"} />
+          <Slider movies={trendingList} category={"Trending Movies"} />
           <MoviesListContainer movies={topRated} category={"Top Rated"} />
+          <MoviesListContainer movies={inTheathers} category={"In Theaters"} />
         </div>
       </div>
     </Layout>

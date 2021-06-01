@@ -18,15 +18,15 @@ export default function SliderBullets({
   }
 
   return (
-    <div className="flex   place-items-end mr-10 md:mr-16  ">
-      <div className="slider-bullets lg:mx-auto  flex  w-full lg:w-1/5 justify-between items-center">
+    <div className="flex md:mr-16  ">
+      <div className="slider-bullets w-48 flex   justify-evenly items-center">
         <i
-          className="las la-angle-left  pr-2 cursor-pointer text-white  lg:text-2xl font-bold"
+          className="las la-angle-left  pr-2 cursor-pointer hover:text-white text-gray-600  lg:text-2xl font-bold"
           onClick={() => handleActiveStep(activeStep - 1)}
         ></i>
         {content.map((bullet) => bullet)}
         <i
-          className="las la-angle-right  pr-2 cursor-pointer text-white  lg:text-2xl font-bold"
+          className="las la-angle-right  pr-2 cursor-pointer hover:text-white text-gray-600  lg:text-2xl font-bold"
           onClick={() => handleActiveStep(activeStep + 1)}
         ></i>
       </div>

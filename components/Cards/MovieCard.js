@@ -6,14 +6,13 @@ export default function MovieCard({ movie }) {
 
   return (
     <Link href={`/movie/${encodeURIComponent(movie.id)}`} key={movie.id}>
-      <div className="block flex-shrink-0  mr-6 mb-6 w-44 h-64  cursor-pointer   ">
+      <div className=" flex-shrink-0  mx-4 w-48 mb-6    cursor-pointer   ">
         <Image
           src={useMoviePicture(movie.poster_path, "w185")}
-          height="145"
-          width="98"
-          layout="responsive"
+          height="320"
+          width="180"
           alt="cast"
-          className="object-scale-down rounded-xl hover:opacity-50"
+          className=" rounded-xl hover:opacity-50 "
         ></Image>
       </div>
     </Link>
