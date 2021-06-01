@@ -15,7 +15,8 @@ export function useHorizontalScroll() {
             e.deltaX > 0
           )
         ) {
-          e.preventDefault();
+          e.preventDefault({passive: true});
+          
         }
         el.scrollTo({
           left: el.scrollLeft + e.deltaX,
