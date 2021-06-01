@@ -9,8 +9,8 @@ export default function MovieCard({ movie }) {
       <div className=" flex-shrink-0  mx-4 w-48 mb-6    cursor-pointer   ">
         <Image
           src={useMoviePicture(movie.poster_path, "w185")}
-          height="320"
-          width="180"
+          height="278"
+          width="185"
           alt="cast"
           className=" rounded-xl hover:opacity-50 "
         ></Image>
