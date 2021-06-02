@@ -9,7 +9,7 @@ export default function SliderBullets({
     content.push(
       <span
         key={i}
-        className={`rounded-full cursor-pointer  bg-white h-2 w-2 lg:h-2.5 lg:w-2.5 ${
+        className={` cursor-pointer ml-2 lg:ml-0 bg-white h-1 w-4 lg:h-1 lg:w-4 ${
           activeStep === i ? "opacity-100 " : "opacity-20 "
         }`}
         onClick={() => handleActiveStep(i)}
@@ -19,16 +19,16 @@ export default function SliderBullets({
 
   return (
     <div className="flex md:mr-16  ">
-      <div className="slider-bullets w-48 flex   justify-evenly items-center">
-        <i
+      <div className="slider-bullets w-36 flex  mr-10 lg:mr-0  justify-evenly items-center">
+        {/*    <i
           className="las la-angle-left  pr-2 cursor-pointer hover:text-white text-gray-600  lg:text-2xl font-bold"
           onClick={() => handleActiveStep(activeStep - 1)}
-        ></i>
+        ></i> */}
         {content.map((bullet) => bullet)}
-        <i
+        {/*  <i
           className="las la-angle-right  pr-2 cursor-pointer hover:text-white text-gray-600  lg:text-2xl font-bold"
           onClick={() => handleActiveStep(activeStep + 1)}
-        ></i>
+        ></i> */}
       </div>
     </div>
   );
