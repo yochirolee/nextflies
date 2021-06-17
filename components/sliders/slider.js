@@ -1,4 +1,4 @@
-import { useRef, useState, useEffect } from "react";
+import { useRef, useState, useEffect, useLayoutEffect } from "react";
 import MovieCard from "../Cards/MovieCard";
 import SliderBullets from "./sliderBullets";
 
@@ -14,9 +14,13 @@ export default function Slider({ movies, category }) {
   useEffect(() => {
     setValue(-sliderRefWidth.current.offsetWidth * activeStep);
     setTotalSteps(
-      scrollRefWidth.current.offsetWidth / sliderRefWidth.current.offsetWidth
+      Math.floor(
+        scrollRefWidth.current.offsetWidth / sliderRefWidth.current.offsetWidth
+      )
     );
   }, [activeStep]);
+
+  useEffect(() => {}, []);
 
   const handleActiveStep = (step) => {
     if (step >= 0 && step <= totalSteps) setActiveStep(step);
@@ -24,7 +28,7 @@ export default function Slider({ movies, category }) {
 
   return (
     <div className="my-4">
-      <div className='flex justify-between align-middle'>
+      <div className="flex justify-between align-middle">
         <h3 className="text-2xl font-semibold mb-6 text-white px-10">
           {category}
         </h3>

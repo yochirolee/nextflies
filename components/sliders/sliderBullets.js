@@ -1,8 +1,11 @@
+import {useEffect} from 'react';
+
 export default function SliderBullets({
   bullets,
   handleActiveStep,
   activeStep,
-}) {
+})
+ {
   let content = [];
 
   for (let i = 0; i < bullets; i++) {
@@ -15,6 +18,10 @@ export default function SliderBullets({
         onClick={() => handleActiveStep(i)}
       ></span>
     );
+
+  
+
+
   }
 
   return (
